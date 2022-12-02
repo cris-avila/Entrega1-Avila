@@ -1,0 +1,23 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block mensaje_dinamico %}
+<h2>Remeras</h2>
+
+
+<!-- Crear Formulario -->
+<form action="{% url 'remeras' %}" method="post"> {% csrf_token %}
+    <table>
+    {{ remeras }}
+    </table>
+    <input type="submit" value="Agregar">
+
+</form>
+{% endblock %}
+
+
+
+{% block mensaje_final %}
+<p style="color: black"> </p>
+{% endblock %}
