@@ -1,6 +1,7 @@
 from django import forms
 
 class FormBodys(forms.Form):
+    tipo=forms.CharField(max_length=30)
     marca=forms.CharField(max_length=30)
     modelo=forms.CharField(max_length=30)
     color=forms.CharField(max_length=30)
@@ -8,6 +9,7 @@ class FormBodys(forms.Form):
     precio=forms.IntegerField()
     
 class FormPantalones(forms.Form):
+    tipo=forms.CharField(max_length=30)
     marca=forms.CharField(max_length=30)
     modelo=forms.CharField(max_length=30)
     color=forms.CharField(max_length=30)
@@ -15,6 +17,7 @@ class FormPantalones(forms.Form):
     precio=forms.IntegerField()
     
 class FormRemeras(forms.Form):
+    tipo=forms.CharField(max_length=30)
     marca=forms.CharField(max_length=30)
     modelo=forms.CharField(max_length=30)
     color=forms.CharField(max_length=30)

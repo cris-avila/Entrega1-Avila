@@ -7,9 +7,10 @@
 
 
 <!-- Crear Formulario -->
-<form action="{% url 'buscarProductos' %}" method="get"> {% csrf_token %}
+<form action="{% url 'resultadoBusqueda' %}" method="GET">
     
-    <table>        
+    <table>     
+
         <P> Que queres buscar:  <input type="text" name="tipo"> </P>
         
     </table>

@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Bodys(models.Model):
-    tipo=str("bodys")
+    tipo=models.CharField(max_length=30)
     marca=models.CharField(max_length=30)
     modelo=models.CharField(max_length=30)
     color=models.CharField(max_length=30)
@@ -12,7 +12,7 @@ class Bodys(models.Model):
 
 
 class Pantalones(models.Model):
-    tipo=str("pantalones")
+    tipo=models.CharField(max_length=30)
     marca= models.CharField(max_length=30)
     modelo= models.CharField(max_length=30)
     color= models.CharField(max_length=30)
@@ -21,7 +21,7 @@ class Pantalones(models.Model):
         
 
 class Remeras(models.Model):
-    tipo=str("remeras")
+    tipo=models.CharField(max_length=30)
     marca= models.CharField(max_length=30)
     modelo= models.CharField(max_length=30)
     color= models.CharField(max_length=30)

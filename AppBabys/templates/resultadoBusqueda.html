@@ -8,10 +8,21 @@
 
 {% if curso %}
 <ul>
-    {% for curso in cursos %}
-    <li>{{curso.nombre}}</li>
-    <li>{{curso.comision}}</li>
+    {% for tipo in tipos %}
+    <li>{{bodys.marca}}</li>
+    <li>{{bodys.modelo}}</li>
+    <li>{{bodys.color}}</li>
+    <li>{{bodys.talle}}</li>
     <br>
+    <li>{{pantalones.marca}}</li>
+    <li>{{pantalones.modelo}}</li>
+    <li>{{pantalones.color}}</li>
+    <li>{{pantalones.talle}}</li>
+    <br>
+    <li>{{remeras.marca}}</li>
+    <li>{{remeras.modelo}}</li>
+    <li>{{remeras.color}}</li>
+    <li>{{remeras.talle}}</li>
     {{% endfor %}}
 </ul>
 

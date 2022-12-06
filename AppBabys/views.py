@@ -50,10 +50,10 @@ def pantalones(request):
 def buscarProductos(request):
     return render(request, "buscarProductos.html", {"mensaje_inicio": "Buscar Productos"})
     
-"""def buscar(request):    
-    if request.Get["tipo"]:
-        tipo=request.Get["tipo"]        
-        tipo=tipo.objets.filter(tipo=)
-        return render(request, "resultadobuscar.html", {"prductos": "productos" })
+def resultadoBusqueda(request):    
+    if request.GET["tipo"]:
+        tipo=request.GET["tipo"]        
+        tipo=tipo.objets.filter(tipo="tipo")
+        return render(request, "resultadoBusqueda.html", {"prductos": tipo })
     else:
-        return render(request, "buscarProductos.html", {"mensaje_inicio: "Buscar Productos"})"""
+        return render(request, "busacarProductos", {"mensaje de inicio": "Buscar Productos"})
