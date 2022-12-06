@@ -6,19 +6,26 @@
 <h2>Resultado de Busqueda</h2>
 
 
-{% if curso %}
+{% if tipos %}
 <ul>
-    {% for tipo in tipos %}
+    {% for tipo in bodys %}
+    <li>{{bodys.tipo}}</li>
     <li>{{bodys.marca}}</li>
     <li>{{bodys.modelo}}</li>
     <li>{{bodys.color}}</li>
     <li>{{bodys.talle}}</li>
+    {{% endfor %}}
     <br>
+    {% for tipo in pantalones %}
+    <li>{{pantalones.tipo}}</li>
     <li>{{pantalones.marca}}</li>
     <li>{{pantalones.modelo}}</li>
     <li>{{pantalones.color}}</li>
     <li>{{pantalones.talle}}</li>
+    {{% endfor %}}
     <br>
+    {% for tipo in remeras %}
+    <li>{{remeras.tipo}}</li>
     <li>{{remeras.marca}}</li>
     <li>{{remeras.modelo}}</li>
     <li>{{remeras.color}}</li>
