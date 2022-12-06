@@ -1,0 +1,26 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block mensaje_dinamico %}
+<h2>Resultado de Busqueda</h2>
+
+
+{% if curso %}
+<ul>
+    {% for curso in cursos %}
+    <li>{{curso.nombre}}</li>
+    <li>{{curso.comision}}</li>
+    <br>
+    {{% endfor %}}
+</ul>
+
+{% else %}
+<p>NO hay Productos que mostrar</p>
+{% endblock %}
+
+
+
+{% block mensaje_final %}
+<p style="color: black"> </p>
+{% endblock %}

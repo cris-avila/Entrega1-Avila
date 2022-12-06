@@ -12,9 +12,9 @@ def bodys(request):
         formulario_bodys = FormBodys(request.POST)
         if formulario_bodys.is_valid():
             formulario_limpia = formulario_bodys.cleaned_data
-            remeras_ingresado_db = Bodys(marca=formulario_limpia["marca"], modelo=formulario_limpia["modelo"],
+            bodys_ingresado_db = Bodys(marca=formulario_limpia["marca"], modelo=formulario_limpia["modelo"],
                                            color=formulario_limpia["color"], talle=formulario_limpia["talle"], precio=formulario_limpia["precio"])
-            remeras_ingresado_db.save()
+            bodys_ingresado_db.save()
             return render(request, "inicio.html", {"mensaje_inicio": "Datos GuardadosS!"})
     else:
         formulario_bodys_vacio = FormBodys()
@@ -47,6 +47,13 @@ def pantalones(request):
         formulario_pantalones_vacio = FormPantalones()
         return render(request, "pantalones.html", {"pantalones" : formulario_pantalones_vacio})
     
-def buscar(request):
-    return render(request, "buscar.html", {"mensaje_inicio": "Buscar Productos"})
+def buscarProductos(request):
+    return render(request, "buscarProductos.html", {"mensaje_inicio": "Buscar Productos"})
     
+"""def buscar(request):    
+    if request.Get["tipo"]:
+        tipo=request.Get["tipo"]        
+        tipo=tipo.objets.filter(tipo=)
+        return render(request, "resultadobuscar.html", {"prductos": "productos" })
+    else:
+        return render(request, "buscarProductos.html", {"mensaje_inicio: "Buscar Productos"})"""

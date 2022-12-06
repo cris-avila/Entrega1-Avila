@@ -7,6 +7,7 @@ urlpatterns = [
     path("bodys", bodys, name="bodys"),
     path("pantalones", pantalones, name="pantalones"),
     path("remeras", remeras, name="remeras"),
-    path("buscar", buscar, name="buscar"),
+    #path("buscar", buscar, name="buscar"),
+    path("buscarProductos", buscarProductos, name="buscarProductos"),
     path("", inicio, name="inicio"),
 ]

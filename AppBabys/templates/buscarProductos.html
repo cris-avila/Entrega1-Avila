@@ -7,12 +7,15 @@
 
 
 <!-- Crear Formulario -->
-<form action="{% url 'buscar' %}" method="get"> {% csrf_token %}
+<form action="{% url 'buscarProductos' %}" method="get"> {% csrf_token %}
     
-    <input type="number" name="nombre" id="id">
-
+    <table>        
+        <P> Que queres buscar:  <input type="text" name="tipo"> </P>
+        
+    </table>
+    
     <input type="submit" value="Buscar">
-
+          
 </form>
 {% endblock %}
 
